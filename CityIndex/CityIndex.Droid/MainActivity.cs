@@ -44,8 +44,8 @@ namespace CityIndex.Droid
 
                 var dialogBuilder = new AlertDialog.Builder(this);
                 AlertDialog alert = dialogBuilder.Create();
-                alert.SetTitle("Login");
-                alert.SetMessage("Incorrect credentials.");
+                alert.SetTitle("Login Failed");
+                alert.SetMessage("Incorrect username or password");
 
                 alert.SetButton("OK", (c, ev) => { });
                 alert.Show();

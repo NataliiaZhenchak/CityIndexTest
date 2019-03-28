@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using Xamarin.UITest;
+using Xamarin.UITest.Configuration;
 using Xamarin.UITest.Queries;
 
 namespace CityIndex.Automation
@@ -31,10 +32,10 @@ namespace CityIndex.Automation
                     .Android
                     // TODO: Update this path to point to your Android app and uncomment the
                     // code if the app is not included in the solution.
-                    .ApkFile (AndroidApkPath)
+                    //.ApkFile (AndroidApkPath)
                     .StartApp();
             }
-
+            Environment.SetEnvironmentVariable("UITEST_FORCE_IOS_SIM_RESTART", "1");
             return ConfigureApp
                 .iOS
                 // TODO: Update this path to point to your iOS app and uncomment the

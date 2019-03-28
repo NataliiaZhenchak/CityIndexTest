@@ -20,11 +20,13 @@ namespace CityIndex.Automation
 
             if(_platform == Platform.Android)
             {
-                ScenarioContext.Current.SetCurrentPage(new DroidLoginPage(app));
+                ScenarioContext.Current.RegisterPage<LoginPage, DroidLoginPage>(new DroidLoginPage(app));
+                ScenarioContext.Current.RegisterPage<ProfilePage, DroidProfilePage>(new DroidProfilePage(app));
             }
             else if(_platform == Platform.iOS)
             {
-                ScenarioContext.Current.SetCurrentPage(new IOSLoginPage(app));
+                ScenarioContext.Current.RegisterPage<LoginPage, iOSLoginPage>(new iOSLoginPage(app));
+                ScenarioContext.Current.RegisterPage<ProfilePage, iOSProfilePage>(new iOSProfilePage(app));
             }
         }
 
@@ -38,6 +40,7 @@ namespace CityIndex.Automation
         [AfterScenario]
         void ScenarioCleanup()
         {
+            var app = ScenarioContext.Current.Get<IApp>();
             //nothing to clean up
         }
     }

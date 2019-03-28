@@ -10,42 +10,39 @@ using System.CodeDom.Compiler;
 
 namespace CityIndex.iOS
 {
-    [Register("ViewController")]
+    [Register ("ViewController")]
     partial class ViewController
     {
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton btnLogin { get; set; }
 
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtEmail { get; set; }
 
         [Outlet]
-        [GeneratedCode("iOS Designer", "1.0")]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtPassword { get; set; }
 
-        [Action("BtnLogin_TouchUpInside:")]
-        [GeneratedCode("iOS Designer", "1.0")]
-        partial void BtnLogin_TouchUpInside(UIKit.UIButton sender);
+        [Action ("BtnLogin_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void BtnLogin_TouchUpInside (UIKit.UIButton sender);
 
-        void ReleaseDesignerOutlets()
+        void ReleaseDesignerOutlets ()
         {
-            if (btnLogin != null)
-            {
-                btnLogin.Dispose();
+            if (btnLogin != null) {
+                btnLogin.Dispose ();
                 btnLogin = null;
             }
 
-            if (txtEmail != null)
-            {
-                txtEmail.Dispose();
+            if (txtEmail != null) {
+                txtEmail.Dispose ();
                 txtEmail = null;
             }
 
-            if (txtPassword != null)
-            {
-                txtPassword.Dispose();
+            if (txtPassword != null) {
+                txtPassword.Dispose ();
                 txtPassword = null;
             }
         }

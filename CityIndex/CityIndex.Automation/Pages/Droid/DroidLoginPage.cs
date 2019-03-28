@@ -19,14 +19,8 @@ namespace CityIndex.Automation.Pages.Droid
             PasswordField = c => c.Id("txtPassword");
             LoginButton = c => c.Id("btnLogin");
             LoginPopUp = c => c.Id("alertTitle");
+            OKButton = c => c.Id("button1");
         }
 
-        //public override void ClickLogin()
-        //{
-        //    //todo: click logout
-
-
-        //    ScenarioContext.Current.SetCurrentPage(new DroidProfilePage(App));
-        //}
     }
 }

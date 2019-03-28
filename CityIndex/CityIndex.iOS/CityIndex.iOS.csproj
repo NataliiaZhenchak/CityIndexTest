@@ -46,7 +46,7 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: natalia.zenczak@gaincapital.com (J9YKN63567)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
@@ -61,13 +61,16 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Calabash, Version=21.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.21.7\lib\Xamarin.iOS\Calabash.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.21.7\lib\Xamarin.iOS\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\Library\Frameworks\Xamarin.Android.framework\Versions\9.1.8-0\lib\xamarin.android\xbuild-frameworks\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -134,6 +137,24 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfileController.cs" />
+    <Compile Include="ProfileController.designer.cs">
+      <DependentUpon>ProfileController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfileController.cs" />
+    <Compile Include="EditProfileController.designer.cs">
+      <DependentUpon>EditProfileController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CityIndex.Services\CityIndex.Services.csproj">
+      <Project>{A6887341-4176-4C3C-99C3-7B53BE5E44CD}</Project>
+      <Name>CityIndex.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CityIndex.Droid\CityIndex.Droid.csproj">
+      <Project>{1646234E-3BD0-4CC3-9774-1A2533FA00F5}</Project>
+      <Name>CityIndex.Droid</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

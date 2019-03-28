@@ -11,14 +11,14 @@ namespace CityIndex.Automation
 {
     public static class ScenarioContextExtensions
     {
-        public static void SetCurrentPage(this ScenarioContext sc, Page page)
+        public static void RegisterPage<TAb,TCon>(this ScenarioContext sc, TCon page) where TCon : TAb
         {
-            sc.Set(page, Consts.CurrentPageKey);
+            sc.Set<TAb>(page);
         }
 
-        public static TPage GetCurrentPage<TPage>(this ScenarioContext sc) where TPage : Page
+        public static TAb GetPage<TAb>(this ScenarioContext sc) where TAb : Page
         {
-            return sc.Get<TPage>(Consts.CurrentPageKey);
+            return sc.Get<TAb>();
         }
     }
 }
