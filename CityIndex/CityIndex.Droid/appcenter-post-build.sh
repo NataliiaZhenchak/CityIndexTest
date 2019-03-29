@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-echo Start build
-echo $APPCENTER_XAMARIN_CONFIGURATION
+
 if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
 
@@ -107,7 +106,7 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
 
 
-    appcenter login --token token
+    appcenter login --token 261bd482d3c4995216202536cdf8ae3bb95105b2
 
 
 
