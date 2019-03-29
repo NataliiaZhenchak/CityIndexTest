@@ -17,7 +17,7 @@ namespace CityIndex.Automation
         {
             IApp app = AppInitializer.StartApp(_platform);
             ScenarioContext.Current.Set(app);
-
+            
             if(_platform == Platform.Android)
             {
                 ScenarioContext.Current.RegisterPage<LoginPage, DroidLoginPage>(new DroidLoginPage(app));

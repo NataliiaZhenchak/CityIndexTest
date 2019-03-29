@@ -14,7 +14,7 @@ namespace CityIndex.Automation.Pages.Droid
         public DroidProfilePage(IApp app): base(app)
         {
             LoginText = c => c.Id("textView1");
-            LogoutButton = c => c.Id("textView1");
+            LogoutButton = c => c.Id("btnLogout");
         }
 
     }
