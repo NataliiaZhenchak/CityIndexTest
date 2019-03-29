@@ -24,7 +24,9 @@
 \pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
 \cf5 \cell 
 \pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
-\cf6 if\cf4  [ \cf7 "\cf4 $APPCENTER_XAMARIN_CONFIGURATION\cf7 "\cf4  \cf6 ==\cf4  \cf7 "Debug"\cf4  ]\cf6 ;then\cf4 \cell \row
+\cf6 echo Start build \
+echo \cf4 $APPCENTER_XAMARIN_CONFIGURATION\cf6 \
+if\cf4  [ \cf7 "\cf4 $APPCENTER_XAMARIN_CONFIGURATION\cf7 "\cf4  \cf6 ==\cf4  \cf7 "Debug"\cf4  ]\cf6 ;then\cf4 \cell \row
 
 \itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat3 \trbrdrl\brdrnil \trbrdrr\brdrnil 
 \clvertalt \clshdrawnil \clwWidth32910\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl200 \clpadr200 \gaph\cellx4320
