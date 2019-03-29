@@ -31,16 +31,6 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
 
 
-    chmod -R 777 $SolutionFileFolder
-
-
-
-
-    msbuild "$UITestProject" /property:Configuration=$APPCENTER_XAMARIN_CONFIGURATION
-
-
-
-
     UITestDLL=`find "$APPCENTER_SOURCE_DIRECTORY" -name "CityPartner.Automation.dll" | grep bin`
 
     echo UITestDLL: $UITestDLL
@@ -111,6 +101,6 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
 
 
-    appcenter test run uitest --app "natalya.zhenchak-gmail.com/Xamarin.Android" --devices "f669a62b" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir /Users/vsts/agent/2.149.1/work/1/s/CityIndex/CityIndex.Automation/bin/Debug --uitest-tools-dir $TestCloudExeDirectory --async
+    appcenter test run uitest --app "natalya.zhenchak-gmail.com/Xamarin.Android" --devices "f669a62b" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir /$UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
 
 fi
