@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
+if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug Android" ];then
 
 
 
@@ -27,6 +27,7 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
     echo SolutionFileFolder: $SolutionFileFolder
 
     echo UITestProject: $UITestProject
+    echo APPCENTER_XAMARIN_CONFIGURATION: $APPCENTER_XAMARIN_CONFIGURATION
 
     chmod -R 777 $SolutionFileFolder
     msbuild "$UITestProject" /property:Configuration=$APPCENTER_XAMARIN_CONFIGURATION
