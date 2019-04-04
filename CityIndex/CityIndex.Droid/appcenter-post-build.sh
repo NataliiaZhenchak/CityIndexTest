@@ -93,12 +93,12 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
 
 
-    npm install -g appcenter-cli
+    #npm install -g appcenter-cli
 
 
 
 
-    appcenter login --token 373a50821300b6ffd292e11f40bc80bebde8fbc2
+    #appcenter login --token 373a50821300b6ffd292e11f40bc80bebde8fbc2
 
 
 
