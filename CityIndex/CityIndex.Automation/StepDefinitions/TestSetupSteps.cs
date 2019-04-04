@@ -10,7 +10,12 @@ namespace CityIndex.Automation
     [Binding]
     public class TestSetupSteps
     {
+
+#if DEBUG_ANDROID
         Platform _platform = Platform.Android;
+#else   
+        Platform _platform = Platform.iOS;
+#endif
 
         [BeforeScenario]
         void ScenarioSetup()

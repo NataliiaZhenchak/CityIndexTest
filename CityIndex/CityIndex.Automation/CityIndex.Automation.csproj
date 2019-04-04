@@ -32,6 +32,24 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug Android|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug Android</OutputPath>
+    <DefineConstants>DEBUG;TRACE;DEBUG_ANDROID</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>CityIndex.Automation</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug iOS|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug iOS</OutputPath>
+    <DefineConstants>DEBUG;TRACE;DEBUG_IOS</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>CityIndex.Automation</AssemblyName>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -94,11 +112,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CityIndex.Droid\CityIndex.Droid.csproj">
+    <ProjectReference Include="..\CityIndex.Droid\CityIndex.Droid.csproj" Condition="'$(Configuration)' == 'Debug Android'">
       <Project>{1646234e-3bd0-4cc3-9774-1a2533fa00f5}</Project>
       <Name>CityIndex.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CityIndex.iOS\CityIndex.iOS.csproj">
+    <ProjectReference Include="..\CityIndex.iOS\CityIndex.iOS.csproj" Condition="'$(Configuration)' == 'Debug iOS'">
       <Project>{101e3060-8799-4119-8a7a-4f86a01c0c84}</Project>
       <Name>CityIndex.iOS</Name>
     </ProjectReference>
