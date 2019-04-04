@@ -3,8 +3,6 @@
 echo "Starting post build script: Configuration=$APPCENTER_XAMARIN_CONFIGURATION"
 echo "XTC_PLATFORM env variable=$XTC_PLATFORM"
 
-#if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug_Android" ];then
-
 
     echo "Post Build Script Started"
 
@@ -110,4 +108,3 @@ echo "XTC_PLATFORM env variable=$XTC_PLATFORM"
     echo "After appcenter"
 
 
-fi
