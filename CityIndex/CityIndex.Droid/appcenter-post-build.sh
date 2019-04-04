@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
+echo "Starting post build script: Configuration=$APPCENTER_XAMARIN_CONFIGURATION"
 
 if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug Android" ];then
-
-
 
 
     echo "Post Build Script Started"
