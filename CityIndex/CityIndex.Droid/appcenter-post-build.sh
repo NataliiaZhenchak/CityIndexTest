@@ -98,7 +98,7 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
 
 
-    appcenter login
+    appcenter login --token d85a3bd58bd3b01a356311fea8a6df15f3dc3579
 
 
 
