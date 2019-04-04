@@ -36,7 +36,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug Android</OutputPath>
+    <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;TRACE;DEBUG_ANDROID</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <AssemblyName>CityIndex.Automation</AssemblyName>
@@ -45,7 +45,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug iOS</OutputPath>
+    <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;TRACE;DEBUG_IOS</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <AssemblyName>CityIndex.Automation</AssemblyName>
