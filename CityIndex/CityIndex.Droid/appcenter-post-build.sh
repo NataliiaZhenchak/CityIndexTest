@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 echo "Starting post build script: Configuration=$APPCENTER_XAMARIN_CONFIGURATION"
-echo "XTC_PLATFORM env variable=$XTC_PLATFORM"
+echo "listing all environment variables"
+env
 
 
     echo "Post Build Script Started"
