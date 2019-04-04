@@ -48,10 +48,10 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug Android|AnyCPU' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_Android|AnyCPU' ">
     <DebugType></DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug Android</OutputPath>
+    <OutputPath>bin\Debug_Android</OutputPath>
     <DefineConstants>DEBUG;TRACE;DEBUG_ANDROID</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
