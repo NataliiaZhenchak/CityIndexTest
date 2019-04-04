@@ -98,11 +98,11 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
 
 
-    appcenter login --token 132d433074220a6d4fd3583b81a38bbe4b0c8466
+    #appcenter login 
 
 
 
 
-    appcenter test run uitest --app "natalya.zhenchak-gmail.com/Xamarin.Android" --devices "f669a62b" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir /$UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
+    appcenter test run uitest --app "natalya.zhenchak-gmail.com/Xamarin.Android" --token "132d433074220a6d4fd3583b81a38bbe4b0c8466" --devices "f669a62b" --app-path $APKFile --test-series "master" --locale "en_US" --build-dir /$UITestBuildDir --uitest-tools-dir $TestCloudExeDirectory --async
 
 fi
