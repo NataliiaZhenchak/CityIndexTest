@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Starting post build script: Configuration=$APPCENTER_XAMARIN_CONFIGURATION"
-echo "Platform env variable=$Platform"
+echo "XTC_PLATFORM env variable=$XTC_PLATFORM"
 
 if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug_Android" ];then
 
