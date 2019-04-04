@@ -11,15 +11,19 @@ namespace CityIndex.Automation
     public class TestSetupSteps
     {
 
-#if DEBUG_ANDROID
-        Platform _platform = Platform.Android;
-#else   
-        Platform _platform = Platform.iOS;
-#endif
+        //#if DEBUG_ANDROID
+        //        Platform _platform = Platform.Android;
+        //#else   
+        //        Platform _platform = Platform.iOS;
+        //#endif
+
+        Platform _platform;
 
         [BeforeScenario]
         void ScenarioSetup()
         {
+            InitPlatform();
+
             IApp app = AppInitializer.StartApp(_platform);
             ScenarioContext.Current.Set(app);
             
@@ -47,6 +51,23 @@ namespace CityIndex.Automation
         {
             var app = ScenarioContext.Current.Get<IApp>();
             //nothing to clean up
+        }
+
+        void InitPlatform()
+        {
+            var platformEnv = Environment.GetEnvironmentVariable("XTC_PLATFORM");
+            Console.WriteLine($"XTC_PLATFORM={platformEnv}");
+            switch (platformEnv)
+            {
+                case "android":
+                    _platform = Platform.Android;
+                    break;
+                case "ios":
+                    _platform = Platform.iOS;
+                    break;
+                default:
+                    throw new NotSupportedException($"Platform {platformEnv} is not supported.");
+            }
         }
     }
 }
