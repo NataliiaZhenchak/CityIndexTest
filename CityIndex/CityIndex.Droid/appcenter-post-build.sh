@@ -28,10 +28,12 @@ if [ "$APPCENTER_XAMARIN_CONFIGURATION" == "Debug" ];then
 
     echo UITestProject: $UITestProject
 
+    chmod -R 777 $SolutionFileFolder
+    msbuild "$UITestProject" /property:Configuration=$APPCENTER_XAMARIN_CONFIGURATION
 
 
 
-    UITestDLL=`find "$APPCENTER_SOURCE_DIRECTORY" -name "CityPartner.Automation.dll" | grep bin`
+    UITestDLL=`find "$APPCENTER_SOURCE_DIRECTORY" -name "CityIndex.Automation.dll" | grep bin`
 
     echo UITestDLL: $UITestDLL
 
