@@ -14,7 +14,7 @@ namespace CityIndex.Automation.Pages.Droid
 
         public iOSProfilePage(IApp app): base(app)
         {
-            LoginText = c => c.Class("UILabel").Index(0);
+            LoginText = c => c.Class("UILabell").Index(0);
             LogoutButton = c => c.Class("UIButtonLabel").Index(0);
         }
 
