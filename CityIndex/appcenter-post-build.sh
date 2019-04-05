@@ -85,7 +85,7 @@ env
 
     echo TestCloudExeDirectory: $TestCloudExeDirectory
 
-    IPAFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name *.app | head -1`
+    IPAFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name *.ipa | head -1`
     echo IPAFile: $IPAFile
 
 
@@ -105,7 +105,7 @@ env
 
     echo "Appcenter"
 
-    appcenter test run uitest --app "natalya.zhenchak-gmail.com/Xamarin.iOS" --token "132d433074220a6d4fd3583b81a38bbe4b0c8466" --app-path $IPAFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --dsym-dir $DSYMDirectory
+    appcenter test run uitest --app "natalya.zhenchak-gmail.com/Xamarin.iOS" --token "132d433074220a6d4fd3583b81a38bbe4b0c8466" --devices "fdf62899" --app-path $IPAFile --test-series "master" --locale "en_US" --build-dir $UITestBuildDir --dsym-dir $DSYMDirectory
     echo "After appcenter"
 
 
