@@ -151,10 +151,6 @@
       <Project>{A6887341-4176-4C3C-99C3-7B53BE5E44CD}</Project>
       <Name>CityIndex.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CityIndex.Droid\CityIndex.Droid.csproj">
-      <Project>{1646234E-3BD0-4CC3-9774-1A2533FA00F5}</Project>
-      <Name>CityIndex.Droid</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
