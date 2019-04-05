@@ -85,7 +85,7 @@ env
 
     echo TestCloudExeDirectory: $TestCloudExeDirectory
 
-    IPAFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name *.ipa | head -1`
+    IPAFile=`find "$APPCENTER_SOURCE_DIRECTORY" -name *.app | head -1`
     echo IPAFile: $IPAFile
 
 
